@@ -28,3 +28,4 @@ position = Vector2(256, 271)
 scale = Vector2(17, 17.9375)
 sprite_frames = SubResource("SpriteFrames_ymfws")
 frame_progress = 0.9367384
+flip_h = true
