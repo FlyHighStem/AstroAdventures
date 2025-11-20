@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yslow3q3cpq1"
-path="res://.godot/imported/pixil-frame-2 (8).png-bee87c0d5f7473eeb52c6e54ad55571e.ctex"
+uid="uid://dpap0sev6o8h"
+path="res://.godot/imported/Background_StaticBlock_Star1.png-6b5fedf655e7f99c556051cddb518d2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/pixil-frame-2 (8).png"
-dest_files=["res://.godot/imported/pixil-frame-2 (8).png-bee87c0d5f7473eeb52c6e54ad55571e.ctex"]
+source_file="res://img/Background_StaticBlock_Star1.png"
+dest_files=["res://.godot/imported/Background_StaticBlock_Star1.png-6b5fedf655e7f99c556051cddb518d2c.ctex"]
 
 [params]
 
