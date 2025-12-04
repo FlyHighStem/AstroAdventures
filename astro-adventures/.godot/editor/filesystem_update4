@@ -1,3 +1,5 @@
 res://scenes/game.tscn
+res://scripts/kill_zone.gd
+res://scenes/kill_zone.tscn
+res://scenes/kill_zone.gd
 res://scenes/player.tscn
-res://scripts/player.gd
