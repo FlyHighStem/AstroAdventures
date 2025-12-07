@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6rb53oby46c7"]
+
+[ext_resource type="Texture2D" uid="uid://y47qc8xoiikn" path="res://img/UFO_L_Active_Frame1.png" id="1_e5ntb"]
+[ext_resource type="Texture2D" uid="uid://b0bvmwt7pns7" path="res://img/UFO_L_Active_Frame2.png" id="2_axwv8"]
+[ext_resource type="Texture2D" uid="uid://cddeeitk860dy" path="res://img/UFO_L_Active_Frame3.png" id="3_4joxi"]
+[ext_resource type="Texture2D" uid="uid://bsekx1tirom3u" path="res://img/UFO_R_Frame1_Active.png" id="4_irj3v"]
+[ext_resource type="Texture2D" uid="uid://dgh15s5xdc7tv" path="res://img/UFO_R_Frame2_Active.png" id="5_5csj8"]
+[ext_resource type="Texture2D" uid="uid://11wkd6yixlyd" path="res://img/UFO_R_Frame3_Active.png" id="6_6adiv"]
+[ext_resource type="Texture2D" uid="uid://cqol8lob1ut1g" path="res://img/middle_laser.png" id="7_axwv8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tus86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e5ntb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_axwv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4joxi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_05l2o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_irj3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5csj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6adiv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(0, 6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(14, 196)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-275.99997, 196)
+scale = Vector2(7.625, 8.125)
+sprite_frames = SubResource("SpriteFrames_tus86")
+frame_progress = 0.1317717
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(295.0001, 196)
+scale = Vector2(7.8125, 8.375)
+sprite_frames = SubResource("SpriteFrames_05l2o")
+frame_progress = 0.06015762
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(17.999987, 195.00002)
+scale = Vector2(10.749999, 8.0625)
+texture = ExtResource("7_axwv8")
