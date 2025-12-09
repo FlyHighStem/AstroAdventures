@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvlu8r7sf6my5"]
+
+[ext_resource type="Texture2D" uid="uid://dpnjvrvq2orf1" path="res://assets/leftpod1.png" id="1_jib25"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wbuge"]
+radius = 11.0
+height = 28.0
+
+[node name="UfoPlatform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jib25")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_wbuge")

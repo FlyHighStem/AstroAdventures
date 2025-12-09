@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmwut31bxrxu4"]
+
+[ext_resource type="Texture2D" uid="uid://clorrhg52be2r" path="res://assets/rightpod1.png" id="1_phei0"]
+[ext_resource type="Texture2D" uid="uid://dvd6p0rq2cem0" path="res://assets/pixil-frame-0_2.png" id="2_x4om1"]
+[ext_resource type="Texture2D" uid="uid://de3knf8nn5q53" path="res://assets/pixil-frame-1_2.png" id="3_v07is"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q2v3j"]
+height = 26.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qmdsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x4om1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v07is")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="UfoPlatform2" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_phei0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_q2v3j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qmdsv")
+frame_progress = 0.83749396

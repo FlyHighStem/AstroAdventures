@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgia0wqa4qp2w"]
+
+[ext_resource type="Texture2D" uid="uid://cswqd11ftsbxk" path="res://assets/BG_Crashed_UFO.png" id="1_h0ggy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gm8c"]
+
+[node name="crashed ufo" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h0ggy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 10)
+shape = SubResource("CircleShape2D_5gm8c")
