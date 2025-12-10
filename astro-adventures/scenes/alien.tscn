@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjsuglcdyypjk"]
+
+[ext_resource type="Texture2D" uid="uid://6l8mvs117td4" path="res://assets/BG_Lil_Alien.png" id="1_h100l"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8rjw"]
+radius = 9.0
+height = 18.0
+
+[node name="alien" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_h100l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3)
+shape = SubResource("CapsuleShape2D_u8rjw")

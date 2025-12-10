@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://blgcx4u5tx0gn"]
+
+[ext_resource type="PackedScene" uid="uid://huipuvnim2vw" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://bnuibiqexitpw" path="res://scenes/platform_test.tscn" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://clmrpoqysn8qn" path="res://Pictures/Moon1.png" id="3_lnu2h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
+texture = ExtResource("3_lnu2h")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_iywne"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_lbhrr")
+
+[node name="Game" type="Node2D"]
+position = Vector2(0, -1)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_iywne")
+format = 2
+layer_0/tile_data = PackedInt32Array(65542, 0, 0, 131078, 0, 1, 65543, 65536, 0, 131079, 65536, 1, 65540, 0, 0, 131076, 0, 1, 65541, 65536, 0, 131077, 65536, 1, 65538, 0, 0, 131074, 0, 1, 65539, 65536, 0, 131075, 65536, 1, 65536, 0, 0, 131072, 0, 1, 65537, 65536, 0, 131073, 65536, 1, 65544, 0, 0, 131080, 0, 1, 65545, 65536, 0, 131081, 65536, 1, 65546, 0, 0, 131082, 0, 1, 65547, 65536, 0, 131083, 65536, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(125, -2)
+
+[node name="StartFloorWall" type="Node2D" parent="."]
+position = Vector2(21, 29)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(124, 3)
+zoom = Vector2(4, 4)
+
+[node name="Platform_Test" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(162, -25)

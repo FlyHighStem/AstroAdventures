@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxy40dpsb45oi"]
+
+[ext_resource type="Texture2D" uid="uid://dcf3it0wmlc7" path="res://assets/Chest_Open.png" id="1_3u8ya"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dw7mk"]
+height = 25.998953
+
+[node name="chest" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3u8ya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 4)
+rotation = -1.604172
+shape = SubResource("CapsuleShape2D_dw7mk")

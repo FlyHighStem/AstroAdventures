@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsl1q4v7xaf7x"]
+
+[ext_resource type="Texture2D" uid="uid://caqko6hqnbd5a" path="res://img/PlayerFrame1.png" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://5mj0seshlg5t" path="res://img/PlayerFrame3.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://ctdxik566ijew" path="res://img/PlayerFrame2.png" id="3_sweqy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_i3pqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sweqy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(147, 157)
+scale = Vector2(10.1875, 10.8125)
+sprite_frames = SubResource("SpriteFrames_2hs0m")
+frame_progress = 0.021450415
+flip_h = true
